@@ -1,0 +1,1004 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Tiara ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink: #ff8fa3;
+            --soft-pink: #ffe4e9;
+            --dark-pink: #c94f70;
+            --cream: #fff8f6;
+            --text: #68434d;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 10% 10%, #ffdce5 0, transparent 35%),
+                radial-gradient(circle at 90% 80%, #f9d8e5 0, transparent 35%);
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--dark-pink);
+        }
+
+        .nav-heart {
+            font-size: 24px;
+            color: var(--pink);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeUp 1.3s ease;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 9px 20px;
+            background: #ffffffa8;
+            border: 1px solid #ffcbd5;
+            border-radius: 50px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+            color: var(--dark-pink);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 85px);
+            font-weight: 600;
+            line-height: 1.2;
+            color: #70434f;
+        }
+
+        .hero h1 span {
+            font-family: 'Dancing Script', cursive;
+            color: var(--dark-pink);
+            font-size: 1.25em;
+        }
+
+        .hero p {
+            max-width: 500px;
+            margin: 25px auto;
+            font-size: 14px;
+            line-height: 2;
+            color: #96737d;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #ff9daf, #e86b8a);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px #e86b8a38;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px #e86b8a55;
+        }
+
+        .hero-small {
+            font-size: 11px;
+            color: #bd929e;
+            margin-top: 20px;
+        }
+
+        /* FLOATING DECORATION */
+
+        .floating {
+            position: absolute;
+            color: #ee8ba1;
+            pointer-events: none;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .heart-one {
+            top: 25%;
+            left: 12%;
+            font-size: 35px;
+        }
+
+        .heart-two {
+            top: 35%;
+            right: 13%;
+            font-size: 25px;
+            animation-delay: 1s;
+        }
+
+        .heart-three {
+            bottom: 15%;
+            left: 20%;
+            font-size: 23px;
+            animation-delay: 2s;
+        }
+
+        .heart-four {
+            bottom: 20%;
+            right: 20%;
+            font-size: 35px;
+            animation-delay: 1.5s;
+        }
+
+        /* GENERAL SECTION */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title .mini {
+            font-size: 11px;
+            color: var(--dark-pink);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(38px, 6vw, 58px);
+            color: #9e5068;
+            margin: 12px 0;
+        }
+
+        .section-title p {
+            color: #a98a93;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* LETTER */
+
+        .letter-section {
+            background: #fffaf9a8;
+        }
+
+        .envelope-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .envelope {
+            width: 270px;
+            height: 180px;
+            position: relative;
+            margin: 35px 0 25px;
+            cursor: pointer;
+            perspective: 1000px;
+            filter: drop-shadow(0 15px 20px #c75e7830);
+        }
+
+        .envelope-back {
+            position: absolute;
+            inset: 0;
+            background: #ffb7c7;
+            border-radius: 5px;
+        }
+
+        .envelope-front {
+            position: absolute;
+            inset: 0;
+            background: #ffcbd6;
+            clip-path: polygon(0 0, 50% 60%, 100% 0, 100% 100%, 0 100%);
+            z-index: 3;
+        }
+
+        .envelope-flap {
+            position: absolute;
+            inset: 0;
+            background: #ff9fb5;
+            clip-path: polygon(0 0, 100% 0, 50% 58%);
+            transform-origin: top;
+            transition: transform 0.7s ease;
+            z-index: 4;
+        }
+
+        .envelope-heart {
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            font-size: 35px;
+            transition: 0.4s;
+        }
+
+        .envelope.open .envelope-flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+
+        .envelope.open .envelope-heart {
+            opacity: 0;
+        }
+
+        .letter {
+            width: min(100%, 600px);
+            padding: 35px;
+            background: white;
+            border: 1px solid #ffe1e8;
+            border-radius: 18px;
+            box-shadow: 0 15px 50px #c75e7812;
+            text-align: left;
+            display: none;
+            animation: fadeUp 0.8s ease;
+        }
+
+        .letter.show {
+            display: block;
+        }
+
+        .letter h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 35px;
+            color: var(--dark-pink);
+            margin-bottom: 20px;
+        }
+
+        .letter p {
+            font-size: 13px;
+            line-height: 2.2;
+            color: #896a74;
+            margin-bottom: 15px;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 29px;
+            color: var(--dark-pink);
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        /* GALLERY */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .photo-card {
+            padding: 12px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px #c75e7810;
+            transition: 0.4s;
+            transform: rotate(-2deg);
+        }
+
+        .photo-card:nth-child(2) {
+            transform: rotate(2deg);
+        }
+
+        .photo-card:nth-child(3) {
+            transform: rotate(-1deg);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-10px) rotate(0);
+        }
+
+        .photo-card img {
+            display: block;
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #ffe5eb;
+        }
+
+        .photo-caption {
+            padding: 18px 8px 10px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 23px;
+            color: #b65f79;
+        }
+
+        /* LITTLE MESSAGE */
+
+        .message-box {
+            max-width: 750px;
+            margin: auto;
+            padding: 50px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffe7ec, #fff3f4);
+            border: 1px solid #ffdae3;
+            border-radius: 30px;
+        }
+
+        .message-box .big-heart {
+            font-size: 45px;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .message-box h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(35px, 6vw, 50px);
+            color: #a44e69;
+            margin: 20px 0;
+        }
+
+        .message-box p {
+            max-width: 500px;
+            margin: auto;
+            color: #997580;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        /* MUSIC BUTTON */
+
+        .music-button {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid #ffcbd5;
+            background: #fff;
+            color: #c94f70;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px #b85f7025;
+            z-index: 50;
+            transition: 0.3s;
+        }
+
+        .music-button:hover {
+            transform: scale(1.1);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 45px 20px;
+            color: #bd929e;
+            font-size: 12px;
+            line-height: 2;
+        }
+
+        footer .footer-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: #c45f7a;
+        }
+
+        /* HEART ANIMATION */
+
+        .floating-heart {
+            position: fixed;
+            bottom: -30px;
+            z-index: 100;
+            pointer-events: none;
+            animation: rise 4s linear forwards;
+        }
+
+        /* REVEAL */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(8deg);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            15% {
+                transform: scale(1.2);
+            }
+            30% {
+                transform: scale(1);
+            }
+            45% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rise {
+            to {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* RESPONSIVE HP */
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 22px 6%;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .heart-one {
+                left: 7%;
+                top: 20%;
+            }
+
+            .heart-two {
+                right: 7%;
+                top: 25%;
+            }
+
+            .heart-three {
+                left: 8%;
+            }
+
+            .heart-four {
+                right: 8%;
+            }
+
+            section {
+                padding: 75px 6%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                max-width: 370px;
+            }
+
+            .photo-card img {
+                height: 330px;
+            }
+
+            .letter {
+                padding: 25px;
+            }
+
+            .envelope {
+                transform: scale(0.9);
+                margin: 20px 0;
+            }
+
+            .message-box {
+                padding: 40px 22px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="logo">Rendy & Tiara ♡</div>
+        <div class="nav-heart">♥</div>
+    </nav>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="floating heart-one">♡</div>
+        <div class="floating heart-two">✿</div>
+        <div class="floating heart-three">♥</div>
+        <div class="floating heart-four">✧</div>
+
+        <div class="hero-content">
+
+            <div class="tag">A LITTLE WEBSITE FOR YOU ♡</div>
+
+            <h1>
+                My favorite<br>
+                person is <span>you.</span>
+            </h1>
+
+            <p>
+                Hai, Tiara! Aku bikin sesuatu yang sederhana,
+                tapi aku harap bisa bikin kamu tersenyum.
+                Selamat datang di sudut kecil yang aku buat khusus buat kamu. ♡
+            </p>
+
+            <a href="#letter-section" class="button">
+                Ada sesuatu buat kamu 💌
+            </a>
+
+            <div class="hero-small">
+                made with love by Rendy ♡
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- LOVE LETTER -->
+
+    <section class="letter-section" id="letter-section">
+
+        <div class="section-title reveal">
+            <div class="mini">a letter from me</div>
+            <h2>A little letter for you</h2>
+            <p>Ada pesan kecil yang pengin aku sampaikan buat kamu.</p>
+        </div>
+
+        <div class="envelope-area reveal">
+
+            <div class="envelope" id="envelope" onclick="openLetter()">
+
+                <div class="envelope-back"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-heart">💗</div>
+
+            </div>
+
+            <p style="font-size:12px;color:#b58c98;text-align:center">
+                Tap amplopnya untuk membuka surat ♡
+            </p>
+
+            <article class="letter" id="letter">
+
+                <h3>Dear, Tiara ♡</h3>
+
+                <p>
+                    Hai, Tiara sayang. 💗
+                </p>
+
+                <p>
+                    Aku mungkin nggak selalu pandai mengungkapkan perasaan
+                    lewat kata-kata. Makanya, kali ini aku pengin bikin
+                    sesuatu yang bisa kamu lihat kapan aja.
+                </p>
+
+                <p>
+                    Terima kasih sudah menjadi bagian dari hari-hariku.
+                    Hal sederhana seperti ngobrol sama kamu, mendengar
+                    ceritamu, atau melihat kamu bahagia bisa menjadi
+                    hal kecil yang berarti buat aku.
+                </p>
+
+                <p>
+                    Aku tahu kita nggak harus selalu punya hari yang
+                    sempurna. Kalau ada masalah, semoga kita bisa belajar
+                    saling memahami, saling mendengarkan, dan memperbaiki
+                    semuanya bersama-sama.
+                </p>
+
+                <p>
+                    Aku harap kamu selalu ingat kalau kamu itu berharga.
+                    Jangan lupa jaga kesehatan, istirahat yang cukup,
+                    dan tetap jadi Tiara yang aku kenal.
+                </p>
+
+                <p>
+                    Website ini memang sederhana, tapi aku membuatnya
+                    khusus buat kamu. Semoga setiap kali kamu membukanya,
+                    ada sedikit kebahagiaan yang kamu rasakan.
+                </p>
+
+                <p>
+                    Pokoknya, terima kasih sudah hadir dalam ceritaku.
+                    Semoga kita masih punya banyak cerita indah
+                    untuk ditulis bersama. ♡
+                </p>
+
+                <div class="signature">
+                    With love,<br>
+                    Rendy ♡
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+
+    <section id="gallery-section">
+
+        <div class="section-title reveal">
+            <div class="mini">little pieces of us</div>
+            <h2>Our little gallery</h2>
+            <p>Beberapa foto yang bisa kamu isi dengan kenangan kalian. 📸</p>
+        </div>
+
+        <div class="gallery">
+
+            <div class="photo-card reveal">
+                <img
+                    src="foto1.jpeg"
+                    alt="Kenangan pertama"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                >
+
+                <div class="photo-placeholder"
+                     style="display:none;height:280px;background:#ffe6ec;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;color:#bd7187">
+                    <span style="font-size:40px">📸</span>
+                    <span style="font-size:12px;margin-top:10px">Tambahkan foto 1</span>
+                </div>
+
+                <div class="photo-caption">My favorite memory ♡</div>
+            </div>
+
+            <div class="photo-card reveal">
+                <img
+                    src="foto2.jpeg"
+                    alt="Kenangan kedua"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                >
+
+                <div class="photo-placeholder"
+                     style="display:none;height:280px;background:#ffe6ec;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;color:#bd7187">
+                    <span style="font-size:40px">🌷</span>
+                    <span style="font-size:12px;margin-top:10px">Tambahkan foto 2</span>
+                </div>
+
+                <div class="photo-caption">You & me ♡</div>
+            </div>
+
+            <div class="photo-card reveal">
+                <img
+                    src="foto3.jpeg"
+                    alt="Kenangan ketiga"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+                >
+
+                <div class="photo-placeholder"
+                     style="display:none;height:280px;background:#ffe6ec;border-radius:12px;align-items:center;justify-content:center;flex-direction:column;color:#bd7187">
+                    <span style="font-size:40px">🧸</span>
+                    <span style="font-size:12px;margin-top:10px">Tambahkan foto 3</span>
+                </div>
+
+                <div class="photo-caption">A moment to remember ♡</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SPECIAL MESSAGE -->
+
+    <section id="message-section">
+
+        <div class="message-box reveal">
+
+            <div class="big-heart">💗</div>
+
+            <h2>For my favorite girl</h2>
+
+            <p>
+                Kalau dunia lagi terasa melelahkan, jangan lupa
+                kasih waktu buat diri kamu sendiri, ya.
+                Kamu nggak harus selalu kuat setiap saat.
+                Semoga hari-harimu dipenuhi hal baik, senyuman,
+                dan alasan kecil untuk bahagia.
+            </p>
+
+            <br>
+
+            <p style="font-family:'Dancing Script',cursive;font-size:27px;color:#b65f79">
+                You are special, Tiara. Always remember that. ♡
+            </p>
+
+            <br>
+
+            <button class="button" onclick="showLove()">
+                Klik kalau kamu senyum 💕
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- MUSIC -->
+
+    <!-- Letakkan file musik bernama music.mp3 di folder yang sama -->
+
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()"
+        aria-label="Putar atau hentikan musik"
+        title="Musik romantis"
+    >
+        ♫
+    </button>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-name">Rendy ♡ Tiara</div>
+
+        <p>
+            A little website, made with a lot of love.
+        </p>
+
+        <p style="margin-top:10px">
+            © <span id="year"></span> — made especially for Tiara 💗
+        </p>
+    </footer>
+
+    <script>
+        // TAHUN OTOMATIS
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // ANIMASI SAAT SCROLL
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        }, {
+            threshold: 0.12
+        });
+
+        document.querySelectorAll(".reveal").forEach((element) => {
+            observer.observe(element);
+        });
+
+
+        // BUKA SURAT
+
+        let letterOpened = false;
+
+        function openLetter() {
+            const envelope = document.getElementById("envelope");
+            const letter = document.getElementById("letter");
+
+            if (!letterOpened) {
+                envelope.classList.add("open");
+
+                setTimeout(() => {
+                    letter.classList.add("show");
+
+                    setTimeout(() => {
+                        letter.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+                    }, 150);
+
+                }, 450);
+
+                letterOpened = true;
+                createHearts(15);
+            } else {
+                letter.classList.remove("open");
+                letter.classList.add("open");
+                letter.classList.remove("open");
+                envelope.classList.add("open");
+                letter.classList.add("show");
+            }
+        }
+
+
+        // HATI BERTERBANGAN
+
+        function createHearts(amount = 10) {
+            const symbols = ["💗", "💕", "♡", "💖", "♥"];
+
+            for (let i = 0; i < amount; i++) {
+                const heart = document.createElement("span");
+
+                heart.className = "floating-heart";
+                heart.textContent =
+                    symbols[Math.floor(Math.random() * symbols.length)];
+
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.fontSize =
+                    (15 + Math.random() * 20) + "px";
+
+                heart.style.animationDuration =
+                    (3 + Math.random() * 3) + "s";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }
+        }
+
+
+        // PESAN KECIL
+
+        function showLove() {
+            alert(
+                "YAY! 💗\n\n" +
+                "Semoga kamu selalu punya alasan untuk tersenyum, Tiara.\n\n" +
+                "With love, Rendy ♡"
+            );
+
+            createHearts(25);
+        }
+
+
+        // MUSIK
+
+        const music = document.getElementById("music");
+        const musicButton = document.getElementById("musicButton");
+
+        let musicPlaying = false;
+
+        async function toggleMusic() {
+            if (!musicPlaying) {
+                try {
+                    await music.play();
+
+                    musicPlaying = true;
+                    musicButton.textContent = "♫";
+                    musicButton.style.animation = "heartbeat 1.5s infinite";
+
+                } catch (error) {
+                    alert(
+                        "Musik belum bisa diputar. Pastikan file music.mp3 " +
+                        "sudah ada di folder website, ya! 💗"
+                    );
+                }
+
+            } else {
+                music.pause();
+
+                musicPlaying = false;
+                musicButton.textContent = "♫";
+                musicButton.style.animation = "none";
+            }
+        }
+
+
+        // HATI KECIL SAAT KLIK HALAMAN
+
+        document.addEventListener("click", (event) => {
+            if (
+                event.target.closest("button") ||
+                event.target.closest(".envelope") ||
+                event.target.closest("a")
+            ) {
+                return;
+            }
+
+            const heart = document.createElement("span");
+
+            heart.textContent = "♡";
+            heart.style.position = "fixed";
+            heart.style.left = event.clientX + "px";
+            heart.style.top = event.clientY + "px";
+            heart.style.color = "#e86b8a";
+            heart.style.fontSize = "22px";
+            heart.style.pointerEvents = "none";
+            heart.style.zIndex = "9999";
+            heart.style.animation = "rise 2s ease forwards";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 2000);
+        });
+    </script>
+
+</body>
+</html>
+```
